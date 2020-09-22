@@ -116,7 +116,7 @@ matrix:
         - sudo make provision-minikube
         - sudo make provision-kubectl
         - sudo make provision-helm
-        - sudo make deploy-efk
+        # - sudo make deploy-efk
       after_success:
         - deactivate
     
