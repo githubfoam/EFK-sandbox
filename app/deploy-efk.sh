@@ -7,6 +7,7 @@ set -o xtrace
 
 echo "=============================EFK Elastic Fluentd Kibana============================================================="
 
+helm repo update
 helm install elasticsearch stable/elasticsearch
 sleep 10
 
