@@ -88,7 +88,7 @@ matrix:
         - minikube version
         - helm version
         - kubectl version --client
-        - sudo make deploy-efk
+        # - sudo make deploy-efk
       after_success:
         - deactivate
 
