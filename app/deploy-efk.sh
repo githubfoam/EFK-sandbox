@@ -25,5 +25,5 @@ echo "=============================EFK Elastic Fluentd Kibana===================
 # https://hub.helm.sh/charts/elastic/elasticsearch
 # Add the Elastic Helm charts repo: 
 helm repo add elastic https://helm.elastic.co
-# with Helm 2: 
-helm install --name elasticsearch --version 7.9.2 elastic/elasticsearch
+# with Helm 3: 
+helm install elasticsearch --version 7.9.2 elastic/elasticsearch
