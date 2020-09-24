@@ -10,13 +10,13 @@ echo "=============================EFK Elastic Fluentd Kibana===================
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 helm repo update
 
-helm install elasticsearch stable/elasticsearch
-sleep 10
+# helm install elasticsearch stable/elasticsearch #WARNING: This chart is deprecated
+# sleep 10
 
-kubectl apply -f app/fluentd-daemonset-elasticsearch.yaml
+# kubectl apply -f app/fluentd-daemonset-elasticsearch.yaml
 
-helm install kibana stable/kibana -f app/kibana-values.yaml
+# helm install kibana stable/kibana -f app/kibana-values.yaml
 
-kubectl apply -f app/counter.yaml
+# kubectl apply -f app/counter.yaml
 
 # curl kibana dashboard
