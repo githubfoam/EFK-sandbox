@@ -7,7 +7,9 @@ set -o xtrace
 
 echo "=============================EFK Elastic Fluentd Kibana============================================================="
 
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 helm repo update
+
 helm install elasticsearch stable/elasticsearch
 sleep 10
 
