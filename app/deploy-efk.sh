@@ -24,6 +24,18 @@ echo "=============================EFK Elastic Fluentd Kibana===================
 # Install released version using Helm repository
 # https://hub.helm.sh/charts/elastic/elasticsearch
 # Add the Elastic Helm charts repo: 
-helm repo add elastic https://helm.elastic.co
-# with Helm 3: 
-helm install elasticsearch --version 7.9.2 elastic/elasticsearch
+# helm repo add elastic https://helm.elastic.co
+# # with Helm 3: 
+# helm install elasticsearch --version 7.9.2 elastic/elasticsearch
+
+echo "=============================EFK Elastic Fluentd Kibana============================================================="
+
+kubectl get namespaces
+
+# create the kube-logging Namespace
+cat <<EOT | sudo tee kube-logging.yaml
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: kube-logging
+EOT
