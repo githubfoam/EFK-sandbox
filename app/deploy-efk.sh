@@ -30,7 +30,15 @@ echo "=============================EFK Elastic Fluentd Kibana===================
 
 echo "=============================EFK Elastic Fluentd Kibana============================================================="
 
-kubectl get namespaces
+kubectl config view
+
+docker ps | grep kube-apiserver
+
+# mkdir -p $HOME/.kube
+# cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+# chown $(id -u):$(id -g) $HOME/.kube/config
+
+# kubectl get namespaces
 
 # create the kube-logging Namespace
 cat <<EOT | sudo tee kube-logging.yaml
