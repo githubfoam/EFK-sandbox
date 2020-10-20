@@ -1,6 +1,9 @@
 IMAGE := alpine/fio
 APP:="app/deploy-openesb.sh"
 
+deploy-jenkins:
+	bash app/deploy-jenkins.sh
+
 deploy-kong:
 	bash app/deploy-kong.sh
 
